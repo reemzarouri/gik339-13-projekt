@@ -1,0 +1,47 @@
+body {
+  background-color: #f8f9fa;
+}
+
+header {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+form .form-label {
+  font-weight: bold;
+}
+
+form .btn {
+  width: 100%;
+}
+
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.car-item {
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  background-color: #e9ecef;
+  transition: background-color 0.3s;
+}
+
+.car-item:hover {
+  background-color: #f1f3f5;
+}
+
+.modal-content,
+.toast {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.toast-container {
+  z-index: 9999;
+  bottom: 1rem;
+  right: 1rem;
+}
