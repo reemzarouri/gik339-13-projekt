@@ -43,9 +43,10 @@ form .btn {
 }
 
 .car-item:hover {
-  transform: scale(1.02) !important;
-  border: 1px solid #007bff !important;
-  background-color: #d8e9ff !important;
+  transform: scale(1.02);
+  border: 1px solid #007bff;
+  z-index: 2;
+  background-color: #d8e9ff;
 }
 
 .modal-content,
