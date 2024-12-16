@@ -64,8 +64,7 @@ function renderCarList(cars) {
 
   cars.forEach((car) => {
     const listItem = document.createElement("li");
-    listItem.className =
-      "list-group-item d-flex justify-content-between align-items-center";
+    listItem.className = "list-group-item car-item";
     listItem.style.backgroundColor = car.color;
 
     listItem.innerHTML = `

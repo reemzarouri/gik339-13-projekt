@@ -9,6 +9,15 @@ header {
   padding: 1rem 0;
 }
 
+section h2 {
+  margin-bottom: 1rem !important;
+  padding-bottom: 1rem;
+}
+
+#car-form {
+  margin-top: 1rem !important;
+}
+
 form .form-label {
   font-weight: bold;
 }
@@ -28,16 +37,20 @@ form .btn {
   border-radius: 5px;
   margin-bottom: 0.5rem;
   background-color: #e9ecef;
-  transition: background-color 0.3s;
+
+  border: 1px solid transparent;
+  transition: border 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .car-item:hover {
-  background-color: #f1f3f5;
+  transform: scale(1.02) !important;
+  border: 1px solid #007bff !important;
+  background-color: #d8e9ff !important;
 }
 
 .modal-content,
 .toast {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
 }
 
 .toast-container {
