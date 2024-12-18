@@ -91,7 +91,7 @@ async function saveCar(event) {
     if (!response.ok) throw new Error("Failed to save car");
 
     const message = id ? "Car updated successfully" : "Car added successfully";
-    //alert()
+
     console.log(message);
     showMessage(message, "success", [
       {
