@@ -29,18 +29,6 @@ function showMessage(message, type = "success", buttons = []) {
   messageBox.show();
 }
 
-function showToast(message, type = "success") {
-  const toastTitle = document.getElementById("toast-title");
-  const toastBody = document.getElementById("toast-body");
-
-  toastTitle.innerText = type === "success" ? "Success" : "Error";
-  toastBody.innerText = message;
-
-  const toastEl = document.getElementById("liveToast");
-  const toast = new bootstrap.Toast(toastEl);
-  toast.show();
-}
-
 // Fetch and display all cars
 async function fetchCars() {
   try {
@@ -51,7 +39,7 @@ async function fetchCars() {
     renderCarList(cars);
   } catch (error) {
     console.error("Error fetching cars:", error.message);
-    showMessage("Error fetching cars: " + error.message, "error", [
+    showMessage("Error fetching cars: " + error.message, [
       { label: "Ok", class: "btn-primary" },
     ]);
   }
@@ -103,8 +91,7 @@ async function saveCar(event) {
     if (!response.ok) throw new Error("Failed to save car");
 
     const message = id ? "Car updated successfully" : "Car added successfully";
-    //showToast(message, "success");
-    //alert(message);
+
     console.log(message);
     showMessage(message, "success", [
       {
@@ -121,7 +108,7 @@ async function saveCar(event) {
     document.getElementById("car-id").value = "";
   } catch (error) {
     console.error("Error saving car:", error.message);
-    //alert("Error saving car: " + error.message);
+
     showMessage("Error saving car: " + error.message, "error", [
       { label: "Ok", class: "btn-primary" },
     ]);
@@ -139,7 +126,6 @@ async function deleteCar(id) {
           const response = await fetch(`${apiUrl}/${id}`, { method: "DELETE" });
           if (!response.ok) throw new Error("Failed to delete car");
 
-          //alert("Car deleted successfully!")
           showMessage("Car deleted successfully!", "success", [
             {
               label: "Ok",
@@ -150,11 +136,9 @@ async function deleteCar(id) {
             },
           ]);
           console.log("Car deleted successfully!");
-          //alert("Car deleted successfully!");
         } catch (error) {
           console.error("Error deleting car:", error.message);
-          //alert("Error deleting car: " + error.message);
-          showMessage("Error deleting car: " + error.message, "error", [
+          showMessage("Error deleting car: " + error.message, [
             { label: "Ok", class: "btn-primary" },
           ]);
         }
