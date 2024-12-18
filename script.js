@@ -106,6 +106,7 @@ async function saveCar(event) {
     const message = id ? "Car updated successfully" : "Car added successfully";
     //showToast(message, "success");
     //alert(message);
+
     console.log(message);
     showMessage(message, "success", [
       {
